@@ -41,9 +41,9 @@ const App = () => {
                 screenOptions={{
                     headerShown: false
                 }}
-                initialRouteName={'SignUp'}
+                initialRouteName={'SignUpr'}
             >
-                {/*<Stack.Screen name="SignUp" component={SignUp} />*/}
+                <Stack.Screen name="SignUp" component={SignUp} />
 
                 {Tabs}
                 <Stack.Screen name="Home" component={Tabs} />

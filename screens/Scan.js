@@ -54,7 +54,7 @@ export default function Scan({navigation}) {
       {scanned && <Button title={'Scan again?'} onPress={() => setScanned(false)} color='tomato' />}
       {scanned && <Button title={'Start'} onPress={() => {
         navigation.navigate('Trash')
-      }}></Button>}
+      }} color = '#54B049'></Button>}
       
     </View>
   );
@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
   barcodebox: {
     alignItems: 'center',
     justifyContent: 'center',
-    height: 300,
+    height: 400,
     width: 300,
     overflow: 'hidden',
     borderRadius: 30,

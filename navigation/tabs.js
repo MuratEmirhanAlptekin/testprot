@@ -170,30 +170,6 @@ const Tabs = () => {
                     )
                 }}
             />
-            <Tab.Screen
-                name="User"
-                component={Home}
-                options={{
-                    tabBarIcon: ({ focused }) => (
-                        <Image
-                            source={icons.user}
-                            resizeMode="contain"
-                            style={{
-                                width: 25,
-                                height: 25,
-                                tintColor: focused ? COLORS.white : COLORS.secondary
-                            }}
-                        />
-                    ),
-                    tabBarButton: (props) => (
-                        <TabBarCustomButton
-                            {...props}
-                        />
-                    )
-                }}
-
-
-            />
 
 
         </Tab.Navigator>
