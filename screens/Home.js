@@ -145,7 +145,7 @@ const Home = ({navigation}) => {
         return (
             <View
                 style={{
-                    height: 120,
+                    height: 220,
                     borderRadius: 20,
                 }}
             >
