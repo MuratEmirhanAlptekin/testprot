@@ -43,9 +43,15 @@ const App = () => {
                 screenOptions={{
                     headerShown: false
                 }}
+<<<<<<< HEAD
                 initialRouteName={'Home'}
             >
                
+=======
+                initialRouteName={'SignUp'}
+            >
+                {/*<Stack.Screen name="SignUp" component={SignUp} />*/}
+>>>>>>> parent of 8b21ea8 (added qr)
 
                 {Tabs}
                 <Stack.Screen name="Home" component={Tabs} />
