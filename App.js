@@ -8,12 +8,13 @@
 
 import React from 'react';
 
-import { SignUp } from "./screens";
+import { Home, SignUp } from "./screens";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
 import Tabs from "./navigation/tabs";
 import Trash from './screens/Trash';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 const theme = {
     ...DefaultTheme,
@@ -36,14 +37,15 @@ const App = () => {
         return null;
     }
     return (
+        
         <NavigationContainer theme={theme}>
             <Stack.Navigator
                 screenOptions={{
                     headerShown: false
                 }}
-                initialRouteName={'SignUpr'}
+                initialRouteName={'Home'}
             >
-                <Stack.Screen name="SignUp" component={SignUp} />
+               
 
                 {Tabs}
                 <Stack.Screen name="Home" component={Tabs} />
@@ -57,9 +59,22 @@ const App = () => {
                         }
                     }></Stack.Screen>
 
+
+            {/*  down below is screen for wallet connect no need for log in at entry*/}
+              
+             <Stack.Screen name='SignUp'
+                    component={SignUp}
+                    options={
+                        {
+                            headerShown: false,
+
+                        }
+                    }></Stack.Screen>
+
                 {/* <Stack.Screen name="Scan" component={Scan} /> */}
             </Stack.Navigator>
         </NavigationContainer>
+        
     )
 }
 

@@ -8,8 +8,11 @@ import {
     TouchableOpacity
 } from "react-native"
 import { COLORS, SIZES, FONTS, icons, images } from "../constants"
-
-const Home = () => {
+import { useNavigation,createStackNavigator,NavigationActions } from '@react-navigation/native';
+import SignUp from "./SignUp"
+import Trash from "./Trash";
+import Scan from "./Scan";
+const Home = ({navigation}) => {
 
     const featuresData = [
         {
@@ -101,11 +104,13 @@ const Home = () => {
     const [specialPromos, setSpecialPromos] = React.useState(specialPromoData)
 
     function renderHeader() {
+    
+
         return (
             <View style={{ flexDirection: 'row', marginVertical: SIZES.padding * 2 }}>
                 <View style={{ flex: 1 }}>
-                    <Text style={{ ...FONTS.h1 }}>Hello!</Text>
-                    <Text style={{ ...FONTS.body2, color: COLORS.gray }}>ByProgrammers</Text>
+                    <Text style={{ ...FONTS.h1 }}>Recycle to Earn</Text>
+                    <Text style={{ ...FONTS.body2, color: COLORS.gray }}>By ANKAxLABS</Text>
                 </View>
 
                 <View style={{ alignItems: 'center', justifyContent: 'center' }}>
@@ -117,27 +122,18 @@ const Home = () => {
                             alignItems: 'center',
                             backgroundColor: COLORS.lightGray
                         }}
+                        onPress={() => {
+                            navigation.navigate('SignUp')
+                          }}
                     >
                         <Image
-                            source={icons.bell}
+                            source={icons.wallet}
                             style={{
                                 width: 20,
                                 height: 20,
                                 tintColor: COLORS.secondary
                             }}
                         />
-                        <View
-                            style={{
-                                position: 'absolute',
-                                top: -5,
-                                right: -5,
-                                height: 10,
-                                width: 10,
-                                backgroundColor: COLORS.red,
-                                borderRadius: 5
-                            }}
-                        >
-                        </View>
                     </TouchableOpacity>
                 </View>
 
